@@ -19,6 +19,6 @@ RUN pip install --requirement /tmp/requirements.txt
 
 RUN pip install jupyter
 RUN pip install git+https://github.com/tequilahub/tequila.git
-# RUN conda install psi4 python=3.9 -c conda-forge/label/libint_dev -c conda-forge
+RUN conda install psi4 python=3.10 -c conda-forge/label/libint_dev -c conda-forge
 
 ENTRYPOINT bash
