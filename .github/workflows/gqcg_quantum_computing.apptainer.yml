@@ -35,7 +35,7 @@ jobs:
 
     # Lowercase registry name needed for push. Hardcoding for now. See https://github.com/orgs/community/discussions/10553.
     - name: Log in to registry and deploy
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       run: |
         echo "${{ secrets.GITHUB_TOKEN }}" | sudo -E apptainer registry login -u ${{ github.actor }} --password-stdin ${{ env.REGISTRY }}
         sudo -E apptainer push gqcg_quantum_computing.sif oras://ghcr.io/gqcg-org/quantum_computing_containers/gqcg_quantum_computing-apptainer:master
