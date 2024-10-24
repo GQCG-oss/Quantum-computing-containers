@@ -1,0 +1,41 @@
+name: Apptainer gqcg_quantum_computing
+
+on:
+  push:
+    branches: 
+      - 'master'
+    paths:
+      - 'gqcg_quantum_computing.def'
+      - '.github/workflows/gqcg_quantum_computing.apptainer.yml'
+  pull_request:
+    paths:
+      - 'SYSMOIC-2024.2.def'
+      - '.github/workflows/gqcg_quantum_computing.apptainer.yml'
+
+env:
+  REGISTRY: oras://ghcr.io
+  IMAGE_NAME: ${{ github.repository }}/gqcg_quantum_computing-apptainer
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v3
+    - uses: eWaterCycle/setup-apptainer@v2
+      with:
+        apptainer-version: 1.3.0
+    - name: Build container
+      run: |
+        sudo -E apptainer build gqcg_quantum_computing.sif ./gqcg_quantum_computing.def
+
+    # Lowercase registry name needed for push. Hardcoding for now. See https://github.com/orgs/community/discussions/10553.
+    - name: Log in to registry and deploy
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      run: |
+        echo "${{ secrets.GITHUB_TOKEN }}" | sudo -E apptainer registry login -u ${{ github.actor }} --password-stdin ${{ env.REGISTRY }}
+        sudo -E apptainer push gqcg_quantum_computing.sif oras://ghcr.io/gqcg-oss/quantum_computing_containers/gqcg_quantum_computing-apptainer:master
