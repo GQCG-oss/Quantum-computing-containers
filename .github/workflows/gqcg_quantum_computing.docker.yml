@@ -3,7 +3,7 @@ name: Docker gqcg_quantum_computing
 on:
   push:
     branches: 
-      - 'master'
+      - 'main'
     paths:
       - 'gqcg_quantum_computing.dockerfile'
       - '.github/workflows/gqcg_quantum_computing.docker.yml'

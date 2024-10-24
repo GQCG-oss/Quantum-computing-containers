@@ -3,13 +3,13 @@ name: Apptainer gqcg_quantum_computing
 on:
   push:
     branches: 
-      - 'master'
+      - 'main'
     paths:
       - 'gqcg_quantum_computing.def'
       - '.github/workflows/gqcg_quantum_computing.apptainer.yml'
   pull_request:
     paths:
-      - 'SYSMOIC-2024.2.def'
+      - 'gqcg_quantum_computing.def'
       - '.github/workflows/gqcg_quantum_computing.apptainer.yml'
 
 env:
@@ -38,4 +38,4 @@ jobs:
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       run: |
         echo "${{ secrets.GITHUB_TOKEN }}" | sudo -E apptainer registry login -u ${{ github.actor }} --password-stdin ${{ env.REGISTRY }}
-        sudo -E apptainer push gqcg_quantum_computing.sif oras://ghcr.io/gqcg-oss/quantum_computing_containers/gqcg_quantum_computing-apptainer:master
+        sudo -E apptainer push gqcg_quantum_computing.sif oras://ghcr.io/gqcg-org/quantum_computing_containers/gqcg_quantum_computing-apptainer:master
