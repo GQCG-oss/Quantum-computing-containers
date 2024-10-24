@@ -14,7 +14,7 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     update-locale LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8 LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
-COPY .docker/requirements.txt /tmp/
+COPY ./requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
 RUN pip install jupyter
