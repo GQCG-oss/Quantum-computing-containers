@@ -3,13 +3,13 @@ name: Apptainer gqcg_quantum_computing
 on:
   push:
     branches: 
-      - 'master'
+      - 'main'
     paths:
       - 'gqcg_quantum_computing.def'
       - '.github/workflows/gqcg_quantum_computing.apptainer.yml'
   pull_request:
     paths:
-      - 'SYSMOIC-2024.2.def'
+      - 'gqcg_quantum_computing.def'
       - '.github/workflows/gqcg_quantum_computing.apptainer.yml'
 
 env:
