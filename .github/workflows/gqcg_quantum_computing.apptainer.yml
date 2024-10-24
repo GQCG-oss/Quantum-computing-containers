@@ -38,4 +38,4 @@ jobs:
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       run: |
         echo "${{ secrets.GITHUB_TOKEN }}" | sudo -E apptainer registry login -u ${{ github.actor }} --password-stdin ${{ env.REGISTRY }}
-        sudo -E apptainer push gqcg_quantum_computing.sif oras://ghcr.io/gqcg-oss/quantum_computing_containers/gqcg_quantum_computing-apptainer:master
+        sudo -E apptainer push gqcg_quantum_computing.sif oras://ghcr.io/gqcg-org/quantum_computing_containers/gqcg_quantum_computing-apptainer:master
