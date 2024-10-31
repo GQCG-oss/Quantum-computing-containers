@@ -12,8 +12,4 @@ From: continuumio/miniconda3:22.11.1
     && apt-get clean \
     && apt-get autoremove -y
 
-    wget http://sysmoic.chem.unisa.it/DISTRIB/STABIN_LNX-2024.2.tar.gz
-    tar -zxf STABIN_LNX-2024.2.tar.gz
-    rm STABIN_LNX-2024.2.tar.gz
-
     cd STABIN && cp * /usr/local/bin
