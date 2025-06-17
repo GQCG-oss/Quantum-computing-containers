@@ -55,7 +55,7 @@ googleapis-common-protos==1.65.0
 grpc-interceptor==0.15.4
 grpcio==1.67.0
 grpcio-status==1.62.3
-h11==0.14.0
+h11==0.16.0
 h5py==3.12.1
 httpcore==1.0.6
 httpx==0.27.2
@@ -133,7 +133,7 @@ pluggy==1.5.0
 prometheus_client==0.21.0
 prompt_toolkit==3.0.48
 proto-plus==1.24.0
-protobuf==4.25.5
+protobuf==4.25.8
 psutil==6.1.0
 ptyprocess==0.7.0
 PubChemPy==1.0.4
