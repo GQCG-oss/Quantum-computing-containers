@@ -6,10 +6,12 @@ on:
       - 'main'
     paths:
       - 'gqcg_quantum_computing.dockerfile'
+      - 'requirements.txt'
       - '.github/workflows/gqcg_quantum_computing.docker.yml'
   pull_request:
     paths:
       - 'gqcg_quantum_computing.dockerfile'
+      - 'requirements.txt'
       - '.github/workflows/gqcg_quantum_computing.docker.yml'
 
 env:
