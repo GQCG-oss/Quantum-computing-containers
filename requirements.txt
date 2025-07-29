@@ -55,7 +55,7 @@ googleapis-common-protos==1.65.0
 grpc-interceptor==0.15.4
 grpcio==1.67.0
 grpcio-status==1.62.3
-h11==0.16.0
+h11==0.14.0
 h5py==3.12.1
 httpcore==1.0.6
 httpx==0.27.2
@@ -165,7 +165,7 @@ qcs-sdk-python==0.20.1
 qiskit==1.2.4
 qiskit-aer==0.15.1
 qiskit-ibm-provider==0.11.0
-qiskit-ibm-runtime==0.31.0
+qiskit-ibm-runtime==0.29.0
 qiskit_algorithms==0.3.1
 qiskit_nature==0.7.2
 qsimcirq==0.21.0
