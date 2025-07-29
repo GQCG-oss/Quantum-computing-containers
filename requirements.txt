@@ -120,10 +120,10 @@ pandas==2.2.3
 pandocfilters==1.5.1
 parso==0.8.4
 pbr==6.1.0
-PennyLane==0.37.0
+pennylane==0.42.1
 PennyLane-Cirq==0.36.0.post0
-PennyLane_Lightning==0.38.0
-PennyLane-qiskit==0.37.0
+pennylane_lightning==0.42.0
+PennyLane-qiskit==0.42.0
 pexpect==4.9.0
 pillow==11.0.0
 pip==22.3.1
