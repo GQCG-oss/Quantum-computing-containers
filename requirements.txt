@@ -110,6 +110,10 @@ networkx==3.4.2
 notebook==7.2.2
 notebook_shim==0.2.4
 numpy==1.25.0
+nvidia-cublas-cu12==12.9.1.4
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cusparse-cu12==12.5.10.65
+nvidia-nvjitlink-cu12==12.9.86
 openfermion==1.6.1
 openfermionpyscf==0.5
 opt_einsum==3.4.0
@@ -123,6 +127,7 @@ pbr==6.1.0
 pennylane==0.42.1
 PennyLane-Cirq==0.36.0.post0
 pennylane_lightning==0.42.0
+pennylane_lightning_gpu==0.42.0
 PennyLane-qiskit==0.42.0
 pexpect==4.9.0
 pillow==11.0.0
